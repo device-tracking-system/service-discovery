@@ -12,7 +12,7 @@ You need to have the following tools installed and configured:
   - Maven 3.0+
 
 ## Installation and Commissioning
-In order to run the configuration server, follow these steps:
+In order to run the service discovery, follow these steps:
   1. Run the [Configuration Server](https://github.com/device-tracking-system/configuration-server).
   2. Clone the latest production version of this repository from the `master` branch.
   2. Navigate to the cloned repository and install all dependencies by typing:
