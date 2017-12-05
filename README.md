@@ -1,1 +1,25 @@
 # Devices Tracking System - Service Discovery
+The Service Discovery allows all microservices composing the application to register 
+dynamically in a global repository and to find another instances on demand.
+
+## Project status
+[![Build Status](https://travis-ci.org/device-tracking-system/service-discovery.svg?branch=master)](https://travis-ci.org/device-tracking-system/service-discovery)
+[![codebeat badge](https://codebeat.co/badges/ae8e7340-605f-4a22-84b0-74dac0919d11)](https://codebeat.co/projects/github-com-device-tracking-system-service-discovery-master)
+    
+## Prerequisites
+You need to have the following tools installed and configured:
+  - Java SE 1.8+
+  - Maven 3.0+
+
+## Installation and Commissioning
+In order to run the configuration server, follow these steps:
+  1. Run the [Configuration Server](https://github.com/device-tracking-system/configuration-server).
+  2. Clone the latest production version of this repository from the `master` branch.
+  2. Navigate to the cloned repository and install all dependencies by typing:
+```
+mvn install
+``` 
+  3. Run the built `*.jar` file passing the location of configuration files by typing:
+```
+java -jar target/service-discovery-1.0-SNAPSHOT.jar --spring.config.location=classpath:pl/edu/agh/iet/dts/discovery/
+```
