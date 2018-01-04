@@ -35,8 +35,12 @@ docker build . -t service-discovery
 
   3. In order to run the image, type:
 ```
-docker run -p 8080:8080 -t service-discovery
+docker run -p 8080:8080 -p 44341:44321 -p 44343:44323 -t service-discovery
 ```
+Please note that this docker container uses the Performance Co-Pilot (PCP) tool to gather data for system monitoring
+metrics. These values are accessed via the `44341` and `44343` ports. In order to visualize performance of this
+microservice, please enter the `[CONTAINER IP ADDRESS]:44343` value in the `Hostname` field placed in the Netflix Vector
+dashboard.
 
 ## Testing
 In order to test the application locally, run the built `*.jar` file by typing:
