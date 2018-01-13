@@ -35,7 +35,7 @@ docker build . -t service-discovery
 
   3. In order to run the image, type:
 ```
-docker run -p 8080:8080 -p 44341:44321 -p 44343:44323 -t service-discovery
+docker run -p 8080:8080 -p 44341:44321 -p 44343:44323 -e CONFIGURATION_SERVER_IP=[CONFIGURATION SERVER HOST IP ADDRESS] -e EUREKA_IP=[EUREKA HOST IP ADDRESS] -t service-discovery
 ```
 Please note that this docker container uses the Performance Co-Pilot (PCP) tool to gather data for system monitoring
 metrics. These values are accessed via the `44341` and `44343` ports. In order to visualize performance of this
